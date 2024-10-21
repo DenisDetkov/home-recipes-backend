@@ -34,6 +34,6 @@ public class BucketController {
             messageText.append(ingredient.getName()).append(": ").append(ingredient.getQuantity()).append(" ").append(ingredient.getQuantityName()).append(";");
         }
 
-        telegramBot.sendQueue.add(BotUtils.generateMessage(Constants.DEVELOPER_USERID, messageText.toString()));
+        telegramBot.sendQueue.add(BotUtils.generateMessage(Constants.KATE_USERID, messageText.toString()));
     }
 }
