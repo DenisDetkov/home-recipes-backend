@@ -24,5 +24,20 @@ public class Ingredient {
     private Integer quantity;
 
     @Column(nullable = false)
-    private String quantityName;
+    private Type type;
+
+    public enum Type {
+        PACKET("пакет"), TEA_SPOON("ч. ложка"), TABLE_SPOON("стол. ложка"), PIECE("шт."), MLITER("мілілітр"), LITER("літр"), GRAM("грам"), KILOGRAM("кілограм");
+
+        public final String text;
+
+        Type(String text) {
+            this.text = text;
+        }
+
+        @Override
+        public String toString() {
+            return this.text;
+        }
+    }
 }
