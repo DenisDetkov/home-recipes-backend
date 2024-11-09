@@ -50,6 +50,6 @@ public class BucketController {
             }
         }
 
-        telegramBot.sendQueue.add(BotUtils.generateMessage(Constants.DEVELOPER_USERID, messageText.toString()));
+        telegramBot.sendQueue.add(BotUtils.generateMessage(Constants.KATE_USERID, messageText.toString()));
     }
 }
